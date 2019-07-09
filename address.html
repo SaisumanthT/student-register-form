@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="name.css">
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+<nav class="bagal-vala">
+  <div id="nav-items">
+    <ul>
+      <li><a href="index.html" > 1)Personal Information</a></li>
+      <li><a href="address.html" class="active">  2)Address Details</a></li>
+      <li><a href="academicdetails.html"> 3)Academic Details</a></li>
+      <li><a href="additionaldetails.html">    4)Extracurricular</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+$(function(){
+    $('a').each(function(){
+        if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+    });
+});
+</script>
+
+<div class="page-content">
+  <div class="form-content">
+<fieldset>
+  <div class="addressDetail">
+    <h3>Address Details</h3>
+    <br>
+    <form class="name" action="" method="post">
+      <div class="form-row">
+        <label for="area/landmark">Area</label>
+        <input type="text" name="area/landmark" id="ar/lnd" class="input-text" placeholder="Area/Landmark" required>
+      </div>
+
+      <div class="form-row">
+        <label for="flat">Area</label>
+        <input type="text" name="flat" id="flat" class="input-text" placeholder="locality" required>
+      </div>
+
+      <div class="form-row">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" class="input-text" placeholder="City" required>
+      </div>
+
+      <div class="form-row">
+        <label for="your-email">Pincode</label>
+        <input type="text" name="pincode" id="pincode" class="input-text" placeholder="Pincode" >
+      </div>
+      <div class="form-row">
+        <label for="state">State</label>
+        <input type="text" name="state" id="state" class="input-text" placeholder="State" required>
+      </div>
+
+    </form>
+    <div class="last-next">
+      <a href="academicdetails.html"> <button type="button" name="button" class="button-next" >Next</button></a>
+    </div>
+  </div>
+
+</fieldset>
+</div>
+</div>
